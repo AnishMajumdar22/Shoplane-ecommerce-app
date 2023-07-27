@@ -1,17 +1,13 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Header from '../components/Header'
-import CategoryPage from '../components/CategoryPage'
-import filter from '../components/CatagoryList'
+import React from "react";
+
+import CategoryPage from "../components/CategoryPage";
 
 function SpecificCatPage() {
   return (
     <>
-    
-    <CategoryPage/>
-    
+      <CategoryPage />
     </>
-  )
+  );
 }
 
-export default SpecificCatPage
+export default SpecificCatPage;

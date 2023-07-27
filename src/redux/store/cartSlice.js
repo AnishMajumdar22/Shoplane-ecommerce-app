@@ -10,10 +10,8 @@ const cartSlice = createSlice({
       const existingItem = state.find((cartItem) => cartItem.id === item.id);
 
       if (existingItem) {
-        // If the item already exists in the cart, increment the quantity
         existingItem.quantity++;
       } else {
-        // If the item doesn't exist, add it with quantity 1
         item.quantity = 1;
         state.push(item);
       }
@@ -37,7 +35,6 @@ const cartSlice = createSlice({
         if (itemToDecrement.quantity > 1) {
           itemToDecrement.quantity--;
         } else {
-          // If the quantity is already 1, remove the item from the cart
           return state.filter((item) => item.id !== itemId);
         }
       }

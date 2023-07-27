@@ -4,7 +4,6 @@ import Endpoints from "../api/Endpoints";
 import { Link } from "react-router-dom";
 // import CategoryPage from "./CategoryPage";
 
-
 function CatagoryList() {
   const [catagories, setCatagories] = useState([]);
 
@@ -34,7 +33,6 @@ function CatagoryList() {
                 type="button"
                 key={index}
                 className="btn btn-outline-secondary text-capitalize "
-                
               >
                 {cat}
               </button>

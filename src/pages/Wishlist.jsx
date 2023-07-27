@@ -1,10 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addWish, removeWish } from "../redux/store/wishSlice";
+import { removeWish } from "../redux/store/wishSlice";
 import { add } from "../redux/store/cartSlice";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 function Wishlist() {
   const productOnWishlist = useSelector((state) => state.wishlist);
@@ -13,10 +11,10 @@ function Wishlist() {
   const navigate = useNavigate();
 
   const handleSubmitView = () => {
-    productOnWishlist.map((item)=>{
-      let items=item.id
+    productOnWishlist.map((item) => {
+      let items = item.id;
       navigate("/product/details/" + items);
-    })
+    });
   };
   const addToCart = (products) => {
     dispatch(add(products));
@@ -29,8 +27,8 @@ function Wishlist() {
       <div className="container p-5">
         <h2 className="text-center">My Wishlist</h2>
         <p className="mb-5 text-center fw-bold fs-5">
-          <i className="bi bi-box2-heart"> {productOnWishlist.length}</i>{" "}
-          items in your cart
+          <i className="bi bi-box2-heart"> {productOnWishlist.length}</i> items
+          in your cart
         </p>
         <div className="row mt-5 mx-2">
           {productOnWishlist &&
@@ -42,7 +40,9 @@ function Wishlist() {
                     className="card-img-top object-fit-contain"
                   />
                   <div className="card-body">
-                    <h5 className="card-title mb-0">{products.title.substring(0, 12)}...</h5>
+                    <h5 className="card-title mb-0">
+                      {products.title.substring(0, 12)}...
+                    </h5>
 
                     <h2>
                       <span>&#36;</span> {products.price}

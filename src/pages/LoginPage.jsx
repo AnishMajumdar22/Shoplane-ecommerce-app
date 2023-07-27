@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import Navbar from "../components/Navbar";
 import Endpoints from "../api/Endpoints";
 
 function LoginPage() {
@@ -51,7 +50,6 @@ function LoginPage() {
   });
   return (
     <>
-      
       <div className="container">
         <div className="row">
           <div className="col-md-3"></div>
@@ -59,8 +57,8 @@ function LoginPage() {
             <div className="form-wrapper">
               <h2 className=" text-center">Login</h2>
               <div className={requestResponse.alertClass} role="alert">
-              {requestResponse.textMessage}
-            </div>
+                {requestResponse.textMessage}
+              </div>
               <hr />
               <Formik
                 initialValues={initialValues}

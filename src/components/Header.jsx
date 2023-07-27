@@ -1,15 +1,15 @@
-import React from 'react'
-// import Navbar from './Navbar'
-import CatagoryList from './CatagoryList'
+import React from "react";
+
+import CatagoryList from "./CatagoryList";
 
 function Header() {
   return (
     <>
-    <hr />
-    <CatagoryList />
-    <hr />
+      <hr />
+      <CatagoryList />
+      <hr />
     </>
-  )
+  );
 }
 
-export default Header
+export default Header;

@@ -8,7 +8,7 @@ function Navbar() {
   const handleSubmit = () => {
     navigate("/cart");
   };
-  // login logout 
+  // login logout
   const [loginStatus, setLoginStatus] = useState(false);
 
   useEffect(() => {

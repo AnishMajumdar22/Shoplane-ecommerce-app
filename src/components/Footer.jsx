@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <div className="footer-section mt-4">
-        <hr className='hr hr-blurry' />
+      <hr className="hr hr-blurry" />
       <div className="footer">
         <div className="container d-flex">
           <div className="col-md-4 footer-one">
